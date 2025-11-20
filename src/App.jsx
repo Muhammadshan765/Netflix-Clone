@@ -3,10 +3,11 @@ import Home from './pages/Home/Home'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login from './pages/Login/Login'
 import Player from './pages/Player/Player'
+import WatchLater from './pages/WatchLater/WatchLater'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/player/:id' element={<Player />} />
+        <Route path='/watch-later' element={<WatchLater />} />
       </Routes>
 
     </div>

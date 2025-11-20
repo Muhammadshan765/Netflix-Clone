@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 import logo from '../../assets/logo.png'
 import search_icon from '../../assets/search_icon.svg'
@@ -23,13 +24,15 @@ const Navbar = () => {
     return (
         <div ref={navRef} className='navbar'>
             <div className="navbar-left">
-                <img src={logo} alt="" />
+                <Link to='/' className='navbar-logo'>
+                    <img src={logo} alt="Netflix" />
+                </Link>
                 <ul>
-                    <li>Home</li>
+                    <li><Link to='/'>Home</Link></li>
                     <li>TV shows</li>
                     <li>Movies</li>
                     <li>New & Popular</li>
-                    <li>My list</li>
+                    <li><Link to='/watch-later'>My list</Link></li>
                     <li>Browse by Languages</li>
                 </ul>
             </div>
